@@ -7,6 +7,13 @@
   <title>Document</title>
 </head>
 <body>
-  <form action="/new"></form>
+  <form accept-charset="UTF-8" action="/users/new" method="get">
+    <label for="username">User:</label>
+    <input type="text" id="username" name="user">
+    <label for="email">Email:</label>
+    <input type="string" id="email" name="email">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="pword" minlength="8" required>
+  </form>
 </body>
 </html>
