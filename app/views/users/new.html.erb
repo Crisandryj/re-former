@@ -30,17 +30,19 @@
   <title>Document</title>
 </head>
   <body>
-    <form accept-charset="UTF-8" action="/users/new" method="get">
+    <%= form_tag (accept-charset="UTF-8" action="/users/new" method="get") do %>
       <label for="username">User:</label>
-      <input type="text" id="username" name="user[user]">
+      <%= label_tag(:username, "User:") %>
+      <%= text_field_tag(:username) %>
 
-      <label for="email">Email:</label>
-      <input type="string" id="email" name="user[email]">
+      <%= label_tag(:email, "Email:") %>
+      <%= string_field_tag(:email) %>
 
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="user[pass]" minlength="8" required>
+      <%= label_tag(:password, "Password:") %>
+      <%= password_field_tag(:Password) %>
 
-      <input type="submit" value="Submit">
-    </form>
+      <%= submit_tag("Submit") %>
+
+      <% end %>
   </body>
 </html>
