@@ -1,3 +1,26 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+  <body>
+    <form accept-charset="UTF-8" action="/users/new" method="get">
+      <label for="username">User:</label>
+      <input type="text" id="username" name="user[user]">
+
+      <label for="email">Email:</label>
+      <input type="string" id="email" name="user[email]">
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="user[pass]" minlength="8" required>
+
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,15 +29,18 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
-<body>
-  <form accept-charset="UTF-8" action="/users/new" method="get">
-    <label for="username">User:</label>
-    <input type="text" id="username" name="user">
-    <label for="email">Email:</label>
-    <input type="string" id="email" name="email">
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="pword" minlength="8" required>
-    <input type="submit" value="Submit">
-  </form>
-</body>
+  <body>
+    <form accept-charset="UTF-8" action="/users/new" method="get">
+      <label for="username">User:</label>
+      <input type="text" id="username" name="user[user]">
+
+      <label for="email">Email:</label>
+      <input type="string" id="email" name="user[email]">
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="user[pass]" minlength="8" required>
+
+      <input type="submit" value="Submit">
+    </form>
+  </body>
 </html>
