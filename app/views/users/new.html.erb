@@ -10,6 +10,7 @@
     <form accept-charset="UTF-8" action="/users/new" method="get">
       <label for="username">User:</label>
       <input type="text" id="username" name="user[user]">
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
       <label for="email">Email:</label>
       <input type="string" id="email" name="user[email]">
@@ -21,28 +22,29 @@
     </form>
   </body>
 </html> -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
+
+<!-- <html>
   <body>
-    <%= form_tag (accept-charset="UTF-8" action="/users/new" method="get") do %>
-      <label for="username">User:</label>
+    <%= form_tag("/users/new", method: :get) do %>
+
       <%= label_tag(:username, "User:") %>
       <%= text_field_tag(:username) %>
 
       <%= label_tag(:email, "Email:") %>
-      <%= string_field_tag(:email) %>
+      <%= text_field_tag(:email) %>
 
       <%= label_tag(:password, "Password:") %>
-      <%= password_field_tag(:Password) %>
+      <%= password_field_tag(:password) %>
 
       <%= submit_tag("Submit") %>
 
       <% end %>
+  </body>
+</html> -->
+<html>
+  <body>
+    <%= form_with url: users_path do |form| %>
+    <%= form.text_field :user %>
+    <% end %>
   </body>
 </html>
