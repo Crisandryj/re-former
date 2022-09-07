@@ -1,11 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
+<!-- <html>
   <body>
     <form accept-charset="UTF-8" action="/users/new" method="get">
       <label for="username">User:</label>
@@ -44,7 +37,19 @@
 <html>
   <body>
     <%= form_with url: users_path do |form| %>
+
+    <%= form.label :user, "User:" %>
     <%= form.text_field :user %>
+
+    <%= form.label :email, "Email:" %>
+    <%= form.email_field :email, placeholder: "gogo@gmail.com" %>
+
+    <%= form.label :password, "Password:"%>
+    <%= form.password_field :password %>
+
+
+    <%= form.submit "Submit" %>
+
     <% end %>
   </body>
 </html>
