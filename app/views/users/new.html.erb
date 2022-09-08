@@ -36,10 +36,10 @@
 </html> -->
 <html>
   <body>
-    <%= form_with url: users_path do |form| %>
+    <%= form_with scope: :user, url: new_user_path do |form| %>
 
     <%= form.label :user, "User:" %>
-    <%= form.text_field :user %>
+    <%= form.text_field :user%>
 
     <%= form.label :email, "Email:" %>
     <%= form.email_field :email, placeholder: "gogo@gmail.com" %>

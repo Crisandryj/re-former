@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <%= form_with scope: :user, method: "patch",url: edit_user_path do |form| %>
+
+    <%= form.label :user, "User:" %>
+    <%= form.text_field :user%>
+
+    <%= form.label :email, "Email:" %>
+    <%= form.email_field :email, placeholder: "gogo@gmail.com" %>
+
+    <%= form.label :password, "Password:"%>
+    <%= form.password_field :password %>
+
+
+    <%= form.submit "Submit" %>
+
+    <% end %>
+  </body>
+</html>
