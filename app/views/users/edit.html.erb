@@ -1,6 +1,6 @@
 <html>
   <body>
-    <%= form_with scope: :user, method: "patch",url: edit_user_path do |form| %>
+    <%= form_with scope: :user, model: @user, method: "patch",url: user_path(@user) do |form| %>
 
     <%= form.label :user, "User:" %>
     <%= form.text_field :user%>
