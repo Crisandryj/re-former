@@ -1,19 +1,12 @@
-<html>
-  <body>
-    <%= form_with scope: :user, model: @user, method: "patch",url: user_path(@user) do |form| %>
+<%= form_with model: @user, url: users_path do |form| %>
+  <%= form.label "Username Here:" %>
+  <%= form.text_field :username, value: "Test" %>
 
-    <%= form.label :user, "User:" %>
-    <%= form.text_field :user%>
+  <%= form.label :email %>
+  <%= form.email_field :email, placeholder: "email@example.com" %>
 
-    <%= form.label :email, "Email:" %>
-    <%= form.email_field :email, placeholder: "gogo@gmail.com" %>
+  <%= form.label :password %>
+  <%= form.password_field :password %>
 
-    <%= form.label :password, "Password:"%>
-    <%= form.password_field :password %>
-
-
-    <%= form.submit "Submit" %>
-
-    <% end %>
-  </body>
-</html>
+  <%= form.submit "Update" %>
+<% end %>

@@ -34,11 +34,11 @@
       <% end %>
   </body>
 </html> -->
-<html>
+<!-- <html>
   <body>
-    <%= form_with scope: :user, url: new_user_path do |form| %>
+    <%= form_with model: @user do |form| %>
 
-    <%= form.label :user, "User:" %>
+    <%= form.label "User:" %>
     <%= form.text_field :user%>
 
     <%= form.label :email, "Email:" %>
@@ -52,4 +52,14 @@
 
     <% end %>
   </body>
-</html>
+</html> -->
+
+<%= form_with model: @user do |form| %>
+  <%= form.label "Username:" %>
+  <%= form.text_field :user, value: "Test" %>
+  <%= form.label :email %>
+  <%= form.email_field :email, placeholder: "email@example.com" %>
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+  <%= form.submit "Create" %>
+<% end %>

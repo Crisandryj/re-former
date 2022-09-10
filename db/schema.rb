@@ -10,11 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_01_003853) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_10_003552) do
   create_table "emails", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email"
+  end
+
+  create_table "ids", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "passwords", force: :cascade do |t|
@@ -26,6 +31,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_01_003853) do
   create_table "usernames", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "user"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.string "email"
+    t.string "password"
     t.string "user"
   end
 
